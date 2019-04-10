@@ -2,6 +2,7 @@ package com.example.ksingh15.appbundledemo
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
        var resultList =  list.filterOnCondition { isMultipleOf(it,5) }
 
         print("result is $resultList")
+        prMethod()
     }
 
     fun isMultipleOf(number: Int,multiple: Int): Boolean{
@@ -32,5 +34,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         return result;
+    }
+
+    fun prMethod(){
+        Log.e("KK","new method")
     }
 }
